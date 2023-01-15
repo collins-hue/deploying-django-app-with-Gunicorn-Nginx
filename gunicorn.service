@@ -1,0 +1,20 @@
+nano /etc/systemd/system/gunicorn.service
+
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=bosnia
+Group=www-data
+WorkingDirectory=/home/bosnia/Myblog
+
+#Path to Gunicorn, Use command $ whereis gunicorn, to locate gunicorn
+ExecStart=/home/bosnia/venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/home/bosnia/Myblog/Myblog.sock Myblog.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
