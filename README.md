@@ -1,9 +1,10 @@
 On your terminal
-
+```sh
 $ sudo apt-get update
-
+```
+```sh
 $ sudo apt-get install python3-pip python3-dev libpq-dev nginx
-
+```
 #Upgrading pip && installing virtualenv
 
 $ sudo -H pip3 install --upgrade pip
