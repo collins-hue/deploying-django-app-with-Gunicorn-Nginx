@@ -6,10 +6,12 @@ $ sudo apt-get update
 $ sudo apt-get install python3-pip python3-dev libpq-dev nginx
 ```
 Upgrading pip && installing virtualenv
-
+```sh
 $ sudo -H pip3 install --upgrade pip
+```
+```sh
 $ sudo -H pip3 install virtualenv
-
+```
 Creating and Activating VirtualEnviroment
 ```sh
 $ virtualenv myprojectenv
